@@ -75,7 +75,7 @@ export default function Home() {
           >
             <h3>Partners &rarr;</h3>
             <p>
-              Learn more about our supporting partners.
+              Learn more about our sponsors and supporting partners.
             </p>
           </a>
         </div>
