@@ -1,18 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Logo from '../components/Logo'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Navbar from '../components/Nav';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import { MenuProvider } from '../state';
+
+
+const GlobalStyle = createGlobalStyle`
+  ${reset};
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+`;
+
+
 
 export default function Home() {
   return (
+
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <Logo />
-      </Head>
 
+      </Head>
+      <GlobalStyle />
+      <MenuProvider>
+        <Navbar />
+      </MenuProvider>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Report pollution with <a href="https://github.com/fronterra">Fronterra</a>
         </h1>
 
         <p className={styles.description}>
@@ -57,8 +88,8 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Sponsored by{' '}
+          <img src="/bath.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
