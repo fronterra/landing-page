@@ -60,6 +60,8 @@
 .title,
 .description {
   text-align: center;
+  max-width: 800px;
+  padding: 1rem;
 }
 
 .description {
@@ -124,6 +126,8 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .title {
+    font-size: 4rem !important;
+  }  
 }
-
-
