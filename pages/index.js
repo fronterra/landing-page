@@ -43,40 +43,39 @@ export default function Home() {
       </MenuProvider>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="/">Open Source</a> Pollution Reporting
+          <a href="">Community Supported</a> Pollution Reporting
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Fronterra is an open source pollution reporting system. It is comprised of a fully maintained UI and API, designed for easy implementation in any region.  
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://github.com/fronterra" className={styles.card}>
             <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <p>Find in-depth information about Fronterra UI features and API.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="https://ucsd.edu/" className={styles.card}>
+            <h3>Resources &rarr;</h3>
+            <p>Discover valuable resources for community organizing</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h3>Deploy &rarr;</h3>
+            <p>Learn how to deploy a pollution reporting system for your region in less than 5 hours.</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://google.com"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Partners &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Learn more about our supporting partners.
             </p>
           </a>
         </div>
