@@ -43,7 +43,7 @@ export default function Home() {
       </MenuProvider>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Report pollution with <a href="https://github.com/fronterra">Fronterra</a>
+          <a href="/">Open Source</a> Pollution Reporting
         </h1>
 
         <p className={styles.description}>
