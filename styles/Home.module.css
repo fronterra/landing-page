@@ -78,6 +78,10 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.codeSample {
+  width: 600px;
+}
+
 .grid {
   display: flex;
   align-items: center;
@@ -127,7 +131,11 @@
     flex-direction: column;
   }
 
+  .codeSample {
+    width: 90vw;
+  }
+
   .title {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   }  
 }
