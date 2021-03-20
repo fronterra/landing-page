@@ -4,6 +4,7 @@ import Navbar from '../components/Nav';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import { MenuProvider } from '../state';
+import NumberedCircle from '../components/Circle';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -28,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
   
 `;
 
+const steps = ["Clone Github Repo", "Follow deployment instructions in README.md file", "Start Reporting Corporate Pollutors"
+]
 
 
 export default function Home() {
@@ -42,16 +45,23 @@ export default function Home() {
         <Navbar />
       </MenuProvider>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          <a href="">Community Supported</a> Pollution Reporting
-        </h1>
+        <div className={styles.grid}>
+          <h1 className={styles.title}>
+            <a href="">Community Supported</a> Pollution Reporting
+          </h1>
 
-        <p className={styles.description}>
-          Fronterra is an open source pollution reporting system. It is comprised of a fully maintained UI and API, designed for easy implementation in any region.  
-        </p>
+          <p className={styles.description}>
+            Fronterra is an open source pollution reporting system. It is comprised of a fully maintained UI and API, designed for easy implementation in any region.  
+          </p>          
+        </div>
+
+        <div className={styles.grid}>
+        <img src="/git-clone.svg" className={styles.codeSample} alt="Git Clone Example" />
+        </div>
 
         <div className={styles.grid}>
           <a href="https://github.com/fronterra" className={styles.card}>
+            
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Fronterra UI features and API.</p>
           </a>
