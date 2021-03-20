@@ -15,22 +15,15 @@ const CircleContainer = styled.div`
 
     display: inline-block;
     vertical-align: middle;
-
+    margin-right: 10px;
     line-height: 50px;
-
-    margin: 40px;
 `;
 
-const NumberedCircle = ({ Character, text }) => {
+const NumberedCircle = ({ Character }) => {
     return (
-        <div>
             <CircleContainer>
                 {`${Character}`}
             </CircleContainer>
-
-            {text}
-        </div>
-
     );
 }
 

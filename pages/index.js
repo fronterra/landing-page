@@ -55,10 +55,18 @@ export default function Home() {
           </p>          
         </div>
 
-        <div className={styles.grid}>
-        <img src="/git-clone.svg" className={styles.codeSample} alt="Git Clone Example" />
-        </div>
 
+        <div className={styles.grid}>
+          <div className={styles.staticCard}>
+            <h3> <NumberedCircle Character="1"/> Clone GitHub Repo &rarr;</h3>
+            <img src="/git-clone.png" className={styles.codeSample} alt="Git Clone Example" />
+          </div>
+          
+          <div className={styles.staticCard}>
+            <h3> <NumberedCircle Character="2"/> Configure Deployment &rarr;</h3>
+            <img src="/config-file.png" className={styles.codeSample} alt="Git Clone Example" />
+          </div>
+        </div>
         <div className={styles.grid}>
           <a href="https://github.com/fronterra" className={styles.card}>
             
