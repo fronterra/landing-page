@@ -1,27 +1,36 @@
 import styled from 'styled-components';
+import styles from '../../styles/Home.module.css';
 
 const CircleContainer = styled.div`
-    background: white;
+    background: lightgrey;
     color: black;
+    font-weight: 500;
     font-size: 25px;
-    border: 2px solid black;
+    border: px solid black;
     border-radius: 50%;
 
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     text-align: center;
 
-    display: block;
+    display: inline-block;
     vertical-align: middle;
 
-    line-height: 38px;
+    line-height: 50px;
+
+    margin: 40px;
 `;
 
-const NumberedCircle = ({ Character }) => {
+const NumberedCircle = ({ Character, text }) => {
     return (
-        <CircleContainer>
-            {`${Character}`}
-        </CircleContainer>
+        <div>
+            <CircleContainer>
+                {`${Character}`}
+            </CircleContainer>
+
+            {text}
+        </div>
+
     );
 }
 
