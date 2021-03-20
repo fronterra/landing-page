@@ -26,7 +26,7 @@ export default DesktopNavbar;
 const DesktopNav = styled.nav`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: white;
   color: black;

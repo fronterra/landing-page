@@ -26,9 +26,9 @@ const NavLinksWrapper = styled.ul`
   flex-direction: flex-end;
   align-items: flex-end;
   li {
-    font-weight: 500;
+    font-weight: 300;
     padding: 30px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     a {
       font-size: 20px;
       color: black;
@@ -42,7 +42,7 @@ const NavLinksWrapper = styled.ul`
         position: absolute;
         bottom: 2px;
         left: 0; right: 0;
-        height: 2px;
+        height: 4px;
         background-color: black;
       }
       &:before {

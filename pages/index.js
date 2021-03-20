@@ -46,27 +46,36 @@ export default function Home() {
       </MenuProvider>
       <main className={styles.main}>
         <div className={styles.grid}>
-          <h1 className={styles.title}>
-            <a href="">Community Supported</a> Pollution Reporting
-          </h1>
+          <div className={{...styles.center, ...styles.section}}>
+            <h1 className={styles.title}>
+              <a style={{ textDecoration: 'none'}} href="#">Community Supported</a> Pollution Reporting
+            </h1>
 
-          <p className={styles.description}>
-            Fronterra is an open source pollution reporting system. It is comprised of a fully maintained UI and API, designed for easy implementation in any region.  
-          </p>          
+            <p className={styles.description}>
+              Fronterra is an open source pollution reporting system. It is comprised of a fully maintained UI and API, designed for easy implementation in any region.  
+            </p>               
+          </div>
+    
+          <div className={{...styles.center, ...styles.section, ...styles.examples}}>
+              <img src="/elections_10.svg" className={styles.illustration} alt="Git Clone Example" />          
+          </div>
+
         </div>
-
-
         <div className={styles.grid}>
-          <div className={styles.staticCard}>
-            <h3> <NumberedCircle Character="1"/> Clone GitHub Repo &rarr;</h3>
-            <img src="/git-clone.png" className={styles.codeSample} alt="Git Clone Example" />
-          </div>
           
-          <div className={styles.staticCard}>
-            <h3> <NumberedCircle Character="2"/> Configure Deployment &rarr;</h3>
-            <img src="/config-file.png" className={styles.codeSample} alt="Git Clone Example" />
+          <div className={{...styles.center, ...styles.section, ...styles.examples}}>
+            <div className={styles.staticCard}>
+              <h3> <NumberedCircle Character="1"/> Clone GitHub Repo &rarr;</h3>
+              <img src="/git-clone.png" className={styles.codeSample} alt="Git Clone Example" />
+            </div>
+            
+            <div className={styles.staticCard}>
+              <h3> <NumberedCircle Character="2"/> Configure Deployment &rarr;</h3>
+              <img src="/config-file.png" className={styles.codeSample} alt="Git Clone Example" />
+            </div>            
           </div>
         </div>
+
         <div className={styles.grid}>
           <a href="https://github.com/fronterra" className={styles.card}>
             
@@ -98,6 +107,11 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+
+
+
+
 
       <footer className={styles.footer}>
         <a
