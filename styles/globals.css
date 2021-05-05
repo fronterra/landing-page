@@ -1,11 +1,3 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +5,31 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Segoe UI, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Gilbert-Bold";
+  src: url("/fonts/Gilbert-Bold.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilbert-Color-Bold";
+  src: url("/fonts/Gilbert-Color-Bold.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SoulcraftGX";
+  src: url("/fonts/SoulcraftGX.ttf");
+  font-display: swap;
 }

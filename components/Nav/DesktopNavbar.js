@@ -13,7 +13,7 @@ const DesktopNavbar = () => {
   return (
     <DesktopNav isScrolled={isScrolled}>
       <Link href="" className="logo">
-        <Logo color="black" />
+          <Logo color="black" /> 
       </Link>
       <NavLinks />
       <Hamburger toggled={isMenuOpen} toggle={toggleMenu} duration={0} />
