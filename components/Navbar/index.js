@@ -21,13 +21,19 @@ import { menuData } from '../../data';
  * desired styles work here required a workaround 
  * the is specified here: https://github.com/vercel/next.js/issues/1942#issuecomment-313925454
  *  */
-const formatLink = ({ id, display, href }) => (
-    <Link id={id} prefetch href={href} passHref>
-        <StyledLink>
+const formatLink = ({ id, display, href, isExternal }) => {
+    return isExternal ? (
+        <StyledLink id={id} href={href}>
             {display}
         </StyledLink> 
-    </Link>
-);
+    ) : (
+        <Link id={id} href={href} passHref>
+            <StyledLink>
+                {display}
+            </StyledLink> 
+        </Link>          
+    );
+}
 
 const Navbar = ({ toggle }) => {
     return (
@@ -35,9 +41,9 @@ const Navbar = ({ toggle }) => {
             <Nav>
                 <NavbarContainer>
                     <Logo src={PollutionLogo} />
-                    {/* <MobileIcon onClick={toggle}>
+                    <MobileIcon onClick={toggle}>
                         <FaBars />
-                    </MobileIcon> */}
+                    </MobileIcon>
                     <NavMenu>
                         {
                             menuData.keys.map((key) => formatLink(menuData.values[key]))
