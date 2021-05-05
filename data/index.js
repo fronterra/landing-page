@@ -3,7 +3,7 @@ import { urlObjectKeys } from "next/dist/next-server/lib/utils";
 
 /** holds data about the menu bar, including display names, ids, and href properties */
 export const menuData = {
-    keys: [],
+    keys: ['github'],
     values: {
         documentation: {
             display: "Documentation",
@@ -24,7 +24,13 @@ export const menuData = {
             display: "Contact",
             id: "contact",
             href: "/contact"
-        }   
+        },
+        github: {
+            display: "GitHub",
+            id: "github",
+            href: "https://github.com/pollution-project",
+            isExternal: true
+        }
     }
 };
 
