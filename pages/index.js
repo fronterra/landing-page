@@ -13,6 +13,7 @@ import { homeObjOne } from '../components/InfoSection/Data';
 import { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import HeroSection from '../components/Hero';
+import { HeroBg } from '../components/Hero/HeroStyles';
 
 const steps = ["Clone Github Repo", "Follow deployment instructions in README.md file", "Start Reporting Corporate Pollutors"
 ]

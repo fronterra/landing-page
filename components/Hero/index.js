@@ -50,21 +50,22 @@ function HeroSection() {
               <Arrow isHovering={hover}/>
             </CtaButton>            
           </Fade>
+          <ImagesContainer>
+            <Fade delay={1500} duration={1000}>
+              <Image key='1' src={homePageData.images.image1} alt=""/>
+            </Fade>
+
+            <Fade delay={2000} duration={1000}>
+              <Image key='2' src={homePageData.images.image2} alt=""/>
+            </Fade>
+
+            <Fade delay={2500} duration={1000}>
+              <Image key='3' src={homePageData.images.image3} alt=""/>            
+            </Fade>
+          </ImagesContainer>           
          
         </HeroContent>
-        <ImagesContainer>
-          <Fade delay={1500} duration={1000}>
-            <Image key='1' src={homePageData.images.image1} alt=""/>
-          </Fade>
 
-          <Fade delay={2000} duration={1000}>
-            <Image key='2' src={homePageData.images.image2} alt=""/>
-          </Fade>
-
-          <Fade delay={2500} duration={1000}>
-            <Image key='3' src={homePageData.images.image3} alt=""/>            
-          </Fade>
-        </ImagesContainer> 
       </HeroContainer>
     </>
   );

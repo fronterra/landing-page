@@ -2,34 +2,33 @@ import styled from 'styled-components';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { FaArrowRight } from 'react-icons/fa';
 
+/** 
+ * Contains all content for the hero section and stretches the whole
+ * page length and width.
+ */
 export const HeroContainer = styled.div`
-  background: #0c0c0c;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 0 30px;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-
-  background: hsla(0, 0%, 0%, 1);
-
-  background: linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
-  
-  background: -moz-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
-  
-  background: -webkit-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
+  height: fit-content;
+  width: 100vw;
+  z-index: 2;
+  overflow-x: hidden; 
 `;
 
-export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+/**
+ * 
+ */
+export const HeroTextContentContainer = styled.div`
+  display: flex;
+  justify-content: start;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+`;
+export const HeroAnimationContentContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  justify-content: end;
 `;
 
 export const Arrow = styled(FaArrowRight)`
@@ -41,31 +40,31 @@ export const Arrow = styled(FaArrowRight)`
 `;
 
 export const ImagesContainer = styled.div`
-  position: absolute;
-  height: 500px;
-  width: 500px;
-  right: 0;
-  bottom: 0;
+  display: flex;
+  padding: 0px;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
   z-index: 8;
-  align-items: center;
-  text-algin: center;
 
+  transform: translate(500px, -250px);
 
-  @media screen and (max-width: 700px) {
-    max-height: 30vh;
-    width: 100%;
+  @media screen and (max-width: 768px) {
+    transform: translate(0px, 0px);
   }
 `;
 
 export const Image = styled.img`
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-algin: center;
-  padding: 20px;
-  opacity: .50
+  margin: 20px 20px 0 0;
+  opacity: .50;
+  400px;
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 export const CtaButton = styled.button`
@@ -88,27 +87,20 @@ export const CtaButton = styled.button`
 `;
 
 export const HeroContent = styled.div`
+  max-width: 1100px;
+  height: fit-content;
   z-index: 800;
-  max-width: 1200px;
-  // position: absolute;
+  margin-top: 150px;
+  align-items: center;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: start;
 `;
 
-export const FullScreen = styled.div`
-  height: 100vh;
-  width: 100vw;
+export const Row = styled.div`
 `;
 
-export const FullScreenComponent = ({children}) => {
-    return (
-        <FullScreen>
-            {children}
-        </FullScreen>
-    )
-};
 
 export const ChangableGradient = styled.div`
   background: linear-gradient(
@@ -164,21 +156,4 @@ export const HeroP = styled.p`
   @media screen and (max-width: 480px) {
     font-size: 18px;
   }
-`;
-
-export const HeroBtnWrapper = styled.div`
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
 `;

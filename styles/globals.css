@@ -11,9 +11,17 @@ a {
 }
 
 html, body {
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
+  
+  background: hsla(0, 0%, 0%, 1);
+
+  background: linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
+  
+  background: -moz-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
+  
+  background: -webkit-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);  
 }
 
 @font-face {
