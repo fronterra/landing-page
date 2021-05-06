@@ -30,9 +30,15 @@ export const NavbarContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  padding: 7px 0 0 0;
+  height: 60px;
+  margin: 7px 0 0 0;
   cursor: pointer;
   transform: translateY(-5px);
+
+  @media screen and (max-width: 500px) {
+    height: 45px;
+    margin: 10px 0 0 0;
+  }
 `;
 
 export const NavLogo = styled.div`
