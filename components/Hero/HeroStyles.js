@@ -65,6 +65,10 @@ export const Image = styled.img`
   @media screen and (max-width: 768px) {
     width: 300px;
   }
+
+  @media screen and (max-width: 350px) {
+    width: 250px;
+  }
 `;
 
 export const CtaButton = styled.button`
@@ -96,6 +100,10 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
 `;
 
 export const Row = styled.div`
@@ -138,6 +146,11 @@ export const HeroH1 = styled.h1`
 
   @media screen and (max-width: 480px) {
     font-size: 30px;
+    max-width: 280px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 25px;
     max-width: 280px;
   }
 `;
