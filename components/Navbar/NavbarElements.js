@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background: transparent 80%;
-  box-shaddow: ${({ scrollNav }) => (scrollNav ? '0px 1px 1px #27272780' : 'none')};
   height: 60px;
   margin-top: -60px;
   display: flex;
@@ -12,7 +11,7 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 999;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -42,13 +41,15 @@ export const Logo = styled.img`
 `;
 
 export const NavLogo = styled.div`
+  position: absolute;
+  z-index: 999;
   color: #c9ffc2;
   font-family: dharma-gothic-c, sans-serif;
   font-weight: 800;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 2.75rem;
-  display: flex;
+  // display: flex;
   align-items: center;
   margin-left: 24px;
   text-decoration: none;
@@ -56,7 +57,7 @@ export const NavLogo = styled.div`
 
 export const MobileIcon = styled.div`
   display: none;
-
+  z-index: 998;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
@@ -102,11 +103,11 @@ export const StyledLink = styled.a`
   height: 100%;
   cursor: pointer;
   color: #c9ffc2;
+  background: transparent;
 
   &:hover {
-
     transition: all 0.1s ease-in-out;   
-    border-bottom: 6px solid #c9ffc2;
+    border-bottom: 30px solid #c9ffc2;
   }
 `;
 
