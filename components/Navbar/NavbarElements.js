@@ -95,19 +95,39 @@ export const NavItem = styled.li`
   }
 `;
 
+export const StyledLinkContainer = styled.div`
+  position: relative;
+  wight: fit-content;
+  height: fit-content;
+  margin: 0 1rem 0 1rem;
+`;
+
+
 export const StyledLink = styled.a`
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  padding: 1.1rem;
+  // padding: 1.1rem;
   height: 100%;
   cursor: pointer;
-  color: #c9ffc2;
-  background: transparent;
+  color: white;
 
-  &:hover {
-    transition: all 0.1s ease-in-out;   
-    border-bottom: 6px solid #c9ffc2;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 `;
 
@@ -118,19 +138,6 @@ export const NavBtn = styled.nav`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`;
-
-export const NavLinks = styled(Link)`
-  // display: block;
-  // text-align: center;
-  // text-decoration: none;
-  // padding: 1rem;
-  // height: 60px !important;
-  // cursor: pointer;
-
-  // &.active {
-  //   border-bottom: 3px solid black;
-  // }
 `;
 
 export const NavBtnLink = styled.div`

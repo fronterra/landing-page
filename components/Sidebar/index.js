@@ -14,7 +14,7 @@ import { menuData } from '../../data';
 import Link from 'next/link';
 
 const formatLink = ({ id, display, href }) => (
-  <Link id={id} prefetch href={href} passHref>
+  <Link id={id} href={href} passHref>
     <StyledSidebarLink>
       {display}
     </StyledSidebarLink>
