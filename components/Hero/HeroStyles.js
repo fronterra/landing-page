@@ -32,10 +32,10 @@ export const HeroAnimationContentContainer = styled.div`
 `;
 
 export const Arrow = styled(FaArrowRight)`
-  color: ${({ isHovering }) => (isHovering ? 'darkblue' : '#c9ffc2')};
+  color: ${({ isHovering }) => (isHovering ? 'black' : 'white')};
 
   transition: transform 0.4s ease-in-out;  
-  transform: translate(${({ isHovering }) => (isHovering ? '14px' : '10px')}, 2px);
+  transform: translate(${({ isHovering }) => (isHovering ? '12px' : '8px')}, 2px);
   
 `;
 
@@ -78,14 +78,14 @@ export const CtaButton = styled.button`
   font-size: 16px;
   font-family: Helvetica;
   width: 200px;
-  border: 2px solid #c9ffc2;
-  color: #c9ffc2;
+  border: 2px solid white;
+  color: white;
   background: transparent;
 
   :hover {
-    transition: all 0.4s ease-in-out;
-    background: #c9ffc2;
-    color: darkblue;
+    transition: all 0.2s ease-in-out;
+    background: white;
+    color: black;
     cursor: pointer;
   }
 `;
@@ -132,7 +132,7 @@ export const SetGradient = styled.div`
 
 
 export const HeroH1 = styled.h1`
-  color: #c9ffc2;
+  color: #0BC9CD;
   font-family: SoulcraftGX;
   font-size: 60px;
   font-weight: 600;
