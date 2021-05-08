@@ -38,7 +38,7 @@ export default function Home() {
           />
         {/* <link rel="stylesheet" href="https://use.typekit.net/kgt4trk.css" /> */}
       </Head>
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} isOpen={isOpen}/>
       <Sidebar toggle={toggle} isOpen={isOpen} />   
       <HeroSection />
     </>
