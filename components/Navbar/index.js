@@ -1,5 +1,9 @@
 import React from 'react';
 import PollutionLogo from '../../public/logos/pollution-project-logo-neon.png';
+
+import Burger from '@animated-burgers/burger-squeeze';
+import '@animated-burgers/burger-squeeze/dist/styles.css';
+
 import {
     MobileIcon,
     Nav,
@@ -35,14 +39,18 @@ const formatLink = ({ id, display, href, isExternal }) => {
     );
 }
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, isOpen }) => {
     return (
         <>
             <Nav>
                 <NavbarContainer>
-                    <Logo src={PollutionLogo} />
+                    <Link href="/">
+                        <Logo src={PollutionLogo} />
+                    </Link>
+                    
                     <MobileIcon onClick={toggle}>
-                        <FaBars />
+                        {/* <FaBars /> */}
+                        <Burger isOpen={isOpen} />
                     </MobileIcon>
                     <NavMenu>
                         {
