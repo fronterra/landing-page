@@ -59,7 +59,7 @@ export const ImagesContainer = styled.div`
 export const Image = styled.img`
   position: relative;
   margin: 20px 20px 0 0;
-  opacity: .50;
+  opacity: .90;
   400px;
 
   @media screen and (max-width: 768px) {
@@ -83,7 +83,7 @@ export const CtaButton = styled.button`
   background: transparent;
 
   :hover {
-    transition: all 0.4s ease-in-out;  
+    transition: all 0.4s ease-in-out;
     background: #c9ffc2;
     color: darkblue;
     cursor: pointer;
