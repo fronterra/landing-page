@@ -1,5 +1,5 @@
 import React from 'react';
-import PollutionLogo from '../../public/logos/pollution-project-logo-neon.png';
+import PollutionLogo from '../../public/logos/pollution-project-logo-white.png';
 
 import Burger from '@animated-burgers/burger-squeeze';
 import '@animated-burgers/burger-squeeze/dist/styles.css';
@@ -14,7 +14,8 @@ import {
     NavMenu,
     Logo,
     Item,
-    StyledLink
+    StyledLink,
+    StyledLinkContainer
 } from './NavbarElements';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
@@ -27,15 +28,20 @@ import { menuData } from '../../data';
  *  */
 const formatLink = ({ id, display, href, isExternal }) => {
     return isExternal ? (
-        <StyledLink id={id} href={href}>
-            {display}
-        </StyledLink> 
-    ) : (
-        <Link id={id} href={href} passHref>
-            <StyledLink>
+        <StyledLinkContainer key={id}>
+            <StyledLink id={id} href={href}>
                 {display}
-            </StyledLink> 
-        </Link>          
+            </StyledLink>             
+        </StyledLinkContainer>
+    ) : (
+        <StyledLinkContainer>
+            <Link id={id} href={href} passHref>
+                <StyledLink>
+                    {display}
+                </StyledLink> 
+            </Link>                 
+        </StyledLinkContainer>
+     
     );
 }
 
@@ -48,7 +54,7 @@ const Navbar = ({ toggle, isOpen }) => {
                         <Logo src={PollutionLogo} />
                     </Link>
                     
-                    <MobileIcon onClick={toggle}>
+                    <MobileIcon onClick={toggle} style={{ color: '#c9ffc2;'}}>
                         {/* <FaBars /> */}
                         <Burger isOpen={isOpen} />
                     </MobileIcon>
