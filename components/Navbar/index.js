@@ -54,7 +54,7 @@ const Navbar = ({ toggle, isOpen }) => {
                         <Logo src={PollutionLogo} />
                     </Link>
                     
-                    <MobileIcon onClick={toggle} style={{ color: '#c9ffc2;'}}>
+                    <MobileIcon onClick={toggle}>
                         {/* <FaBars /> */}
                         <Burger isOpen={isOpen} />
                     </MobileIcon>
