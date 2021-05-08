@@ -107,7 +107,7 @@ export const StyledLink = styled.a`
 
   &:hover {
     transition: all 0.1s ease-in-out;   
-    border-bottom: 30px solid #c9ffc2;
+    border-bottom: 6px solid #c9ffc2;
   }
 `;
 
