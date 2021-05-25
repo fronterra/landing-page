@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '../ButtonElements';
 import { Fade } from 'react-awesome-reveal';
 import { useRouter } from 'next/router';
 
 import {
   HeroContainer,
-  HeroBg,
   HeroContent,
   HeroH1,
-  HeroP,
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
-  FullScreen,
-  SetGradient,
-  FullScreenComponent,
   CtaButton,
   Arrow,
   ImagesContainer,
