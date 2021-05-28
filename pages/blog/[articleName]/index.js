@@ -1,12 +1,24 @@
 import { useRouter } from 'next/router';
+import { Title, AuthorName } from '../../../components/Blog/BlogStyles';
 
 const BlogPost = () => {
     const router = useRouter();
     return (
         <>
-            <h1 style={{ color: 'white' }}>{router.query.articleName}</h1>
+            <Title>
+                {router.query.articleName}
+            </Title>
+
+            <AuthorName>
+                by Austin Serif
+            </AuthorName>
         </>
     );
 };
+
+BlogPost.defaultProps = {
+    fontColor: 'white'
+}
+
 
 export default BlogPost;
