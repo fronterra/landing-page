@@ -4,12 +4,11 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
   background: transparent 80%;
   height: 60px;
-  margin-top: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 999;
 
@@ -29,21 +28,21 @@ export const NavbarContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 60px;
-  margin: 7px 0 0 0;
+  height: 40px;
+  margin: 15px 0 0 0;
   cursor: pointer;
   transform: translateY(-5px);
 
   @media screen and (max-width: 500px) {
-    height: 45px;
-    margin: 10px 0 0 0;
+    height: 30px;
+    margin: 20px 0 0 0;
   }
 `;
 
 export const NavLogo = styled.div`
   position: absolute;
   z-index: 999;
-  color: #c9ffc2;
+  color: #333333;
   font-family: dharma-gothic-c, sans-serif;
   font-weight: 800;
   justify-self: flex-start;
@@ -57,16 +56,16 @@ export const NavLogo = styled.div`
 
 export const MobileIcon = styled.div`
   display: none;
-  z-index: 998;
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 30%);
+    // margin-top: 5px;
+    // top: 3px;
+    // right: 3px;
+    transform: translate(-50%, 30%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #c9ffc2;
+    color: #333333;
+    z-index: 999 !important;
   }
 `;
 
@@ -75,7 +74,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  // margin-right: -22px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -104,13 +103,13 @@ export const StyledLinkContainer = styled.div`
 
 
 export const StyledLink = styled.a`
-  font-weight: bold;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   // padding: 1.1rem;
   height: 100%;
   cursor: pointer;
-  color: white;
+  color: #333333;
 
   &:before {
     content: "";
@@ -119,7 +118,7 @@ export const StyledLink = styled.a`
     height: 3px;
     bottom: -4px;
     left: 0;
-    background-color: white;
+    background-color: #333333;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -142,10 +141,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.div`
   border-radius: 50px;
-  background: #01bf71;
+  background: #333333;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: #333333;
   font-size: 16px;
   outline: none;
   border: none;
@@ -156,6 +155,6 @@ export const NavBtnLink = styled.div`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: white;
-    color: black;
+    color: #333333;
   }
 `;
