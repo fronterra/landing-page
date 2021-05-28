@@ -7,7 +7,7 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "NunitoSans", Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 html, body {
@@ -16,55 +16,7 @@ html, body {
   height: 100%;
   width: 100%;
   
-  /* background: hsla(0, 0%, 0%, 1);
-
-  background: linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
-  
-  background: -moz-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);
-  
-  background: -webkit-linear-gradient(315deg, hsla(0, 0%, 0%, 1) 30%, hsla(240, 60%, 1%, 1) 40%, hsla(239, 47%, 18%, 1) 100%);   */
 }
-
-@font-face {
-  font-family: "Gilbert-Bold";
-  src: url("/fonts/Gilbert-Bold.otf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gilbert-Color-Bold";
-  src: url("/fonts/Gilbert-Color-Bold.otf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SoulcraftGX";
-  src: url("/fonts/SoulcraftGX.ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NunitoSans";
-  src: url("/fonts/Nunito_Sans/NunitoSans-Black.ttf");
-  font-weight: 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NunitoSans";
-  src: url("/fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf");
-  font-weight: 200;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NunitoSans";
-  src: url("/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
-
-
 
 .burger {
   z-index: 999;
