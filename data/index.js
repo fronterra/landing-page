@@ -3,7 +3,7 @@ import { urlObjectKeys } from "next/dist/next-server/lib/utils";
 
 /** holds data about the menu bar, including display names, ids, and href properties */
 export const menuData = {
-    keys: ['github', 'contact'],
+    keys: ['github'],
     values: {
         documentation: {
             display: "Documentation",
@@ -36,7 +36,7 @@ export const menuData = {
 
 export const homePageData = {
     id: "home",
-    heading: "A Crowdsourced Solution to Pollution Reporting",
+    heading: "Crowdsourced Solutions to Pollution Reporting",
     subheading: "A free, open-source software aimed at helping communities fight industrial pollution from the local level.",
     cta: "Check out our San Diego - Tijuana pilot program!",
     ctaButton: {
@@ -45,8 +45,6 @@ export const homePageData = {
     },
     images: {
         image1: require('../public/images/hero/image1.svg'),
-        image2: require('../public/images/hero/image2.svg'),
-        image3: require('../public/images/hero/image3.svg'),
     }
 };
 
