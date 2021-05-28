@@ -39,6 +39,7 @@ export const FooterLinkItems = styled.div`
   margin: 16px;
   text-align: left;
   width: fit-content;
+  margin-right: 100px;
   box-sizing: border-box;
   color: #fff;
 
@@ -61,7 +62,6 @@ export const FooterLink = styled.a`
   font-size: 14px;
 
   &:hover {
-    color: #01bf71;
     transition: 0.3s ease-out;
   }
 `;
