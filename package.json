@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@animated-burgers/burger-squeeze": "^1.1.2",
+    "@mdx-js/loader": "^0.15.4",
+    "@next/mdx": "^10.2.3",
     "classnames": "^2.2.6",
     "cookie-cutter": "^0.2.0",
     "hamburger-react": "^2.4.0",
