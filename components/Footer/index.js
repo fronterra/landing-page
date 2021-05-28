@@ -17,13 +17,12 @@ import {
   FooterLink,
   SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
   WebsiteRights,
   SocialIcons,
   SocialIconLink
 } from './FooterElements';
 import { Logo } from '../Navbar/NavbarElements';
-import GlimpseLogo from '../../public/logos/pp-logo.svg';
+import EmailCapture from '../EmailCapture';
 
 const Footer = () => {
   const toggleHome = () => {
@@ -44,10 +43,7 @@ const Footer = () => {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contact Us</FooterLinkTitle>
-              <FooterLink href='/'>Contact</FooterLink>
-              <FooterLink href='/'>Support</FooterLink>
-              <FooterLink href='/'>Destinations</FooterLink>
-              <FooterLink href='/'>Sponsorships</FooterLink>
+              <EmailCapture />
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
@@ -58,18 +54,18 @@ const Footer = () => {
               <FooterLink href='/'>Agency</FooterLink>
               <FooterLink href='/'>Influencer</FooterLink>
             </FooterLinkItems>
-            <FooterLinkItems>
+            {/* <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
               <FooterLink href='/'>Instagram</FooterLink>
               <FooterLink href='/'>Facebook</FooterLink>
               <FooterLink href='/'>Youtube</FooterLink>
               <FooterLink href='/'>Twitter</FooterLink>
-            </FooterLinkItems>
+            </FooterLinkItems> */}
           </FooterLinksWrapper>
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <Logo src={GlimpseLogo} onClick={toggleHome}/>
+            {/* <Logo src={GlimpseLogo} onClick={toggleHome}/> */}
             <WebsiteRights>Pollution Project © 2021 All rights reserved.</WebsiteRights>
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
