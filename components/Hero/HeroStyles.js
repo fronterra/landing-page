@@ -66,7 +66,7 @@ export const CtaButton = styled.button`
   border-radius: 40px;
   height: 50px;
   font-size: 16px;
-  font-family: NunitoSans;
+  font-family: Nunito Sans;
   font-weight: 400;
   width: 200px;
   border: 2px solid #1C5DB9;
@@ -120,7 +120,7 @@ export const SetGradient = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #333333;
-  font-family: NunitoSans;
+  font-family:  Nunito Sans;
   font-size: 48px;
   font-weight: 900;
   text-align: center;
@@ -137,7 +137,7 @@ export const HeroP = styled.p`
   font-size: 
   color: #fff;
   font-size: 20px;
-  font-family: NunitoSans;
+  font-family: Nunito Sans;
   font-weight: 200;
   text-align: center;
   @media screen and (max-width: 600px) {

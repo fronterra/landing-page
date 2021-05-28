@@ -30,13 +30,8 @@ export default function Home() {
 
     <>
       <Head>
-          <link
-            rel="preload"
-            href="/fonts/Nunito_Sans/NunitoSans"
-            as="font"
-            crossOrigin=""
-          />
-        {/* <link rel="stylesheet" href="https://use.typekit.net/kgt4trk.css" /> */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;600;900&display=swap" rel="stylesheet" />
       </Head>
       <Navbar toggle={toggle} isOpen={isOpen}/>
       <Sidebar toggle={toggle} isOpen={isOpen} />   
