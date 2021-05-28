@@ -9,8 +9,8 @@ import { FaArrowRight } from 'react-icons/fa';
 export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 0 30px;
-  height: fit-content;
   width: 100vw;
   z-index: 2;
   overflow-x: hidden; 
@@ -26,44 +26,34 @@ export const HeroTextContentContainer = styled.div`
   height: 100%;
 `;
 export const HeroAnimationContentContainer = styled.div`
+  display: block;
   width: 100%;
   height: 100%;
-  justify-content: end;
 `;
 
 export const Arrow = styled(FaArrowRight)`
-  color: ${({ isHovering }) => (isHovering ? 'black' : 'white')};
+  color: ${({ ishovering }) => (ishovering ? 'white' : '#1C5DB9')};
 
   transition: transform 0.4s ease-in-out;  
-  transform: translate(${({ isHovering }) => (isHovering ? '12px' : '8px')}, 2px);
+  transform: translate(${({ ishovering }) => (ishovering ? '12px' : '8px')}, 2px);
   
 `;
 
 export const ImagesContainer = styled.div`
-  display: flex;
-  padding: 0px;
-  justify-content: start;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  width: 100%;
   z-index: 8;
-
-  transform: translate(500px, -250px);
-
-  @media screen and (max-width: 768px) {
-    transform: translate(0px, 0px);
-  }
+  text-align: center;
 `;
 
 export const Image = styled.img`
   position: relative;
+  align-content: center;
   margin: 20px 20px 0 0;
   opacity: .90;
   400px;
 
   @media screen and (max-width: 768px) {
     width: 300px;
+    margin: 10px 10px 0 0;
   }
 
   @media screen and (max-width: 350px) {
@@ -73,33 +63,31 @@ export const Image = styled.img`
 
 export const CtaButton = styled.button`
   margin-top: 24px;
-  font-weight: bold;
+  border-radius: 40px;
   height: 50px;
   font-size: 16px;
-  font-family: Helvetica;
+  font-family: NunitoSans;
+  font-weight: 400;
   width: 200px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #1C5DB9;
+  color: #1C5DB9;
   background: transparent;
 
   :hover {
     transition: all 0.2s ease-in-out;
-    background: white;
-    color: black;
+    background: #1C5DB9;
+    color: white;
     cursor: pointer;
   }
 `;
 
 export const HeroContent = styled.div`
-  max-width: 1100px;
+  max-width: 800px;
   height: fit-content;
   z-index: 800;
-  margin-top: 150px;
+  margin-top: 10vh;
   align-items: center;
   padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 
   @media screen and (max-width: 768px) {
     margin-top: 100px;
@@ -130,43 +118,29 @@ export const SetGradient = styled.div`
 `;
 
 
-
 export const HeroH1 = styled.h1`
-  color: #0BC9CD;
-  font-family: SoulcraftGX;
-  font-size: 60px;
-  font-weight: 600;
-  text-align: start;
+  color: #333333;
+  font-family: NunitoSans;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
   max-width: 800px;
 
-  @media screen and (max-width: 700px) {
-    font-size: 40px;
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
     max-width: 480px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 30px;
-    max-width: 280px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 25px;
-    max-width: 280px;
   }
 `;
 
 export const HeroP = styled.p`
   margin-top: 24px;
+  font-size: 
   color: #fff;
-  font-size: 24px;
-  font-family: sofia-pro, sans-serif;
-  font-weight: 300;
+  font-size: 20px;
+  font-family: NunitoSans;
+  font-weight: 200;
   text-align: center;
-  max-width: 600px;
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 18px;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
   }
 `;
