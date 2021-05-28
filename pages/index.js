@@ -32,7 +32,7 @@ export default function Home() {
       <Head>
           <link
             rel="preload"
-            href="/fonts/SoulcraftGX.ttf"
+            href="/fonts/Nunito_Sans/NunitoSans"
             as="font"
             crossOrigin=""
           />
@@ -41,6 +41,7 @@ export default function Home() {
       <Navbar toggle={toggle} isOpen={isOpen}/>
       <Sidebar toggle={toggle} isOpen={isOpen} />   
       <HeroSection />
+      <Footer />
     </>
   )
 }
