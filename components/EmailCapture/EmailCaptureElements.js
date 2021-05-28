@@ -4,6 +4,10 @@ export const FormContainer = styled.form`
   width: 300px;
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 350px) {
+    width: 250px;
+  }
 `;
 
 export const TextInput = styled.input`
@@ -13,6 +17,10 @@ export const TextInput = styled.input`
   margin-bottom: 32px;
   border-radius: 4px 0px 0px 4px;
   border: none;
+
+  @media screen and (max-width: 350px) {
+    width: 175px;
+  }
 `;
 
 export const FormButton = styled.button`
@@ -24,4 +32,8 @@ export const FormButton = styled.button`
     border: none;
     border-radius: 0px 4px 4px 0px;
     color: white;
+
+    @media screen and (max-width: 350px) {
+      width: 50px;
+    }
 `;
