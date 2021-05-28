@@ -14,7 +14,7 @@ import { menuData } from '../../data';
 import Link from 'next/link';
 
 const formatLink = ({ id, display, href }) => (
-  <Link id={id} href={href} passHref>
+  <Link key={id} id={id} href={href} passHref>
     <StyledSidebarLink>
       {display}
     </StyledSidebarLink>
@@ -25,9 +25,6 @@ const formatLink = ({ id, display, href }) => (
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
-      {/* <Icon onClick={toggle}>
-        <CloseIcon />
-      </Icon> */}
       <SidebarWrapper>
         <SidebarMenu>
           {
