@@ -21,13 +21,9 @@ import {
   SocialIcons,
   SocialIconLink
 } from './FooterElements';
-import { Logo } from '../Navbar/NavbarElements';
 import EmailCapture from '../EmailCapture';
 
 const Footer = () => {
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
   return (
     <FooterContainer>
       <FooterWrap>

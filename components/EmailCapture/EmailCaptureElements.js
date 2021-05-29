@@ -32,6 +32,7 @@ export const FormButton = styled.button`
     border: none;
     border-radius: 0px 4px 4px 0px;
     color: white;
+    cursor: pointer;
 
     @media screen and (max-width: 350px) {
       width: 50px;
