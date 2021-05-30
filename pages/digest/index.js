@@ -1,13 +1,18 @@
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+
 const Blog = ({ data }) => {
     return (
         <>
-            <h1>
-                {data.title}
-            </h1>
+            <Navbar />
+                <h1>
+                    {data.title}
+                </h1>
 
-            <p>
-                {data.text}
-            </p>
+                <p>
+                    {data.text}
+                </p>
+            <Footer />
         </>
     );
 };
