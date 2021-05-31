@@ -11,17 +11,10 @@ export default (function ghostHandler () {
 
     return {
         /** */
-        async getPosts({ limit = null }) {
+        async getPosts() {
             try {
-
-                const config = {};
-                if (limit !== null && typeof limit === 'number') {
-                    // set `limit` arg into config if deemed valid
-                    config.limit = limit;
-                }
-                
                 // returns an array of post objects
-                return (await api.posts.browse({ ...config }));
+                return (await api.posts.browse({}));
 
             } catch (err) {
                 // handle error
