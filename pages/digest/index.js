@@ -1,20 +1,19 @@
-import Digest from '../../components/Digest';
 import React from 'react';
 import ghostCMS from '../../services/ghostCMS';
-import { stringToHTML } from '../../services/dom';
-
-// TODO: uncomment below
-// import GhostContentAPI from "@tryghost/content-api";
-
+import BlogCard from '../../components/Blog/BlogCard';
+import BlogFeed from '../../components/Blog/BlogFeed';
 
 const Blog = ({ posts }) => {
   return (
       <>
-        {
-          posts.map((v) => {
-            return stringToHTML(v.html);
-          })
-        }
+        <BlogFeed>
+          {
+            posts.map(v => {
+              return <BlogCard {...v}/>
+            })
+          }          
+        </BlogFeed>
+
       </>
   );
 };
