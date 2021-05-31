@@ -1,29 +1,28 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { useState } from 'react';
+import Digest from '../../components/Digest';
+import ghostCMS from '../../services/ghostCMS';
 
-const Blog = ({ data }) => {
-    return (
-        <>
-            <Navbar />
-                <h1>
-                    {data.title}
-                </h1>
+// TODO: uncomment below
+// import GhostContentAPI from "@tryghost/content-api";
 
-                <p>
-                    {data.text}
-                </p>
-            <Footer />
-        </>
-    );
+
+const Blog = ({ data, posts }) => {
+  console.log(posts); // REMOVE
+  return (
+      <>
+        <Digest title={data.title}/>
+      </>
+  );
 };
 
 export const getStaticProps = async () => {
-    const request = await fetch('http://localhost:3000/api/digest')
-    const json = await request.json()
-  
+  // get posts from CMS
+  const posts = await ghostCMS.getPosts();
     return {
       props: {
-        data: json.data
+        posts
       }
     }
 }
