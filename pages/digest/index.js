@@ -8,11 +8,11 @@ import ghostCMS from '../../services/ghostCMS';
 // import GhostContentAPI from "@tryghost/content-api";
 
 
-const Blog = ({ data, posts }) => {
+const Blog = ({ posts }) => {
   console.log(posts); // REMOVE
   return (
       <>
-        <Digest title={data.title}/>
+        <Digest title="Blog"/>
       </>
   );
 };
