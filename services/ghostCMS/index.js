@@ -14,7 +14,7 @@ export default (function ghostHandler () {
         async getPosts() {
             try {
                 // returns an array of post objects
-                return (await api.posts.browse({}));
+                return (await api.posts.browse({ include: "authors,tags" }));
 
             } catch (err) {
                 // handle error
