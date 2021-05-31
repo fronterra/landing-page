@@ -3,7 +3,8 @@ import { formatDistance, subDays } from 'date-fns';
 
 /** Blog Card -- Container */
 export const BlogCardContainer = styled.div`
-    border: .5px solid #333333;
+    position: relative;
+    border: .5px solid lightgrey;
     border-radius: 4px;
     max-width: 300px;
     margin: 40px;
@@ -33,6 +34,9 @@ export const AuthorAvatarContainer = styled.div`
     flex-direction: column;
     margin: 5px;
     text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
 `;
 export const AuthorAvatar = styled.img`
     width: 40px;
@@ -44,6 +48,7 @@ export const TextContainer = styled.div`
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin-bottom: 50px;
 `;
 
 
@@ -51,31 +56,43 @@ export const TextContainer = styled.div`
 export const DescriptionContainer = styled.div`
     padding: 7px;
 `;
-export const BlogPostTag = styled.small`
-    margin-top: 5px;
+export const BlogPostTag = styled.text`
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: black;
+    opacity: .85;
 `;
 
 export const BlogPostTitle = styled.h2`
-    margin-top: 5px;
+    margin-top: 20px;
     font-weight: 900;
 `;
 export const BlogPostDescription = styled.p`
     margin-top: 10px;
     font-weight: 400;
     text-overflow: ellipsis;
-    height: 100px;
-    // white-space: nowrap;
+    height: 60px;
     overflow: hidden;
+    color: #333333;
 `;
 
 export const AuthorInformationContainer = styled.div`
     height: 40px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 45px;
 `;
 export const AuthorName = styled.h5`
-    margin: 20px 0px 0px 5px;
+    margin: 10px 0px 0px 5px;
 `;
 
 const StyledDateAndReadingLength = styled.h6``;
