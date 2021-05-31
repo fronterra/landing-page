@@ -1,18 +1,20 @@
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import { useState } from 'react';
 import Digest from '../../components/Digest';
+import React from 'react';
 import ghostCMS from '../../services/ghostCMS';
+import { stringToHTML } from '../../services/dom';
 
 // TODO: uncomment below
 // import GhostContentAPI from "@tryghost/content-api";
 
 
 const Blog = ({ posts }) => {
-  console.log(posts); // REMOVE
   return (
       <>
-        <Digest title="Blog"/>
+        {
+          posts.map((v) => {
+            return stringToHTML(v.html);
+          })
+        }
       </>
   );
 };
@@ -27,4 +29,4 @@ export const getStaticProps = async () => {
     }
 }
 
-export default Blog;
+export default React.memo(Blog);
