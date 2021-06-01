@@ -10,6 +10,7 @@ module.exports = withPlugins(
         [withMDX]
     ],
     {
-        pageExtensions: ['js', 'jsx', 'mdx']
+        pageExtensions: ['js', 'jsx', 'mdx'],
+        target: "serverless"
     }
 );
