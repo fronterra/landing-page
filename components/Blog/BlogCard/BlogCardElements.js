@@ -4,14 +4,20 @@ import { formatDistance, subDays } from 'date-fns';
 /** Blog Card -- Container */
 export const BlogCardContainer = styled.div`
     position: relative;
-    border: .5px solid lightgrey;
+    border: .3px solid lightgrey;
     border-radius: 4px;
-    max-width: 300px;
-    margin: 40px;
+    max-width: 340px;
+    margin: 55px;
     font-family: "Nunito Sans";
+    width: 100%;
 
-    @media only screen and (max-width: 1000px) {
-        max-width: 450px;
+    @media only screen and (min-width: 1100px) {
+        max-width: 440px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        margin: 30px 0px 0px 0px;
+        max-width: 100%;
     }
 `;
 
@@ -61,7 +67,7 @@ export const BlogPostTag = styled.text`
     font-weight: 600;
     padding: 5px;
     text-transform: uppercase;
-    margin-top: 20px;
+    // margin: 20px;
     color: #fff;
     border-radius: 3px;
     background-color: black;
@@ -75,10 +81,22 @@ export const BlogPostTitle = styled.h2`
 export const BlogPostDescription = styled.p`
     margin-top: 10px;
     font-weight: 400;
-    text-overflow: ellipsis;
-    height: 60px;
+    height: 70px;
     overflow: hidden;
     color: #333333;
+    line-height: 22px;
+
+    :after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        // height: 1.2em;
+        height: 22px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+    }
 `;
 
 export const AuthorInformationContainer = styled.div`
