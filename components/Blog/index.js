@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BlogHomeHeaderContainer = styled.div`
-    height: 300px;
+    height: 200px;
     width: 100%;
 
     display: flex;
@@ -25,4 +25,14 @@ export const BlogHomeHeader = styled.div`
 
 export const StyledH1 = styled.h1`
     font-size: 40px;
+`;
+
+export const StyledP = styled.p`
+  margin-top: 24px;
+  font-size: 
+  color: grey;
+  font-size: 20px;
+  font-family: Nunito Sans;
+  font-weight: 200;
+  text-align: start;
 `;
