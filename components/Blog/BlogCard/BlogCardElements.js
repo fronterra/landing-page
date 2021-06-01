@@ -6,13 +6,13 @@ export const BlogCardContainer = styled.div`
     position: relative;
     border: .3px solid lightgrey;
     border-radius: 4px;
-    max-width: 340px;
+    max-width: ${props => props.featured ? `100%` : `340px`};
     margin: 55px;
     font-family: "Nunito Sans";
     width: 100%;
 
     @media only screen and (min-width: 1100px) {
-        max-width: 440px;
+        max-width: ${props => props.featured ? `100%` : `440px`};
     }
 
     @media only screen and (max-width: 1100px) {
