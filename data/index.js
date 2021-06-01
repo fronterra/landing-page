@@ -1,6 +1,6 @@
 /** holds data about the menu bar, including display names, ids, and href properties */
 export const menuData = {
-    keys: ['github'],
+    keys: ['github', 'digest'],
     values: {
         documentation: {
             display: "Documentation",
