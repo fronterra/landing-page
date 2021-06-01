@@ -1,19 +1,30 @@
 import React from 'react';
 import ghostCMS from '../../services/ghostCMS';
 import BlogCard from '../../components/Blog/BlogCard';
-import BlogFeed from '../../components/Blog/BlogFeed';
+import { BlogFeed, BlogFeedContainer } from '../../components/Blog/BlogFeed';
+import { BlogHomeHeaderContainer, BlogHomeHeader, StyledH1 } from '../../components/Blog';
 
 const Blog = ({ posts }) => {
   return (
       <>
-        <BlogFeed>
-          {
-            posts.map(v => {
-              return <BlogCard {...v}/>
-            })
-          }          
-        </BlogFeed>
+        <BlogHomeHeaderContainer>
+          <BlogHomeHeader>
+            <StyledH1>
+              Digest
+            </StyledH1>
+          </BlogHomeHeader>
+        </BlogHomeHeaderContainer>      
+        <BlogFeedContainer>
 
+
+          <BlogFeed>
+            {
+              posts.map(v => {
+                return <BlogCard {...v}/>
+              })
+            }          
+          </BlogFeed>          
+        </BlogFeedContainer>
       </>
   );
 };
