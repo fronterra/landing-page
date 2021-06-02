@@ -12,7 +12,7 @@ import {
     DateAndReadingLength,
     PreviewImage,
     TextContainer
-} from "./BlogCardElements"
+} from "./StyledComponents"
 import PropTypes from "prop-types";
 
 const BlogCard = (props) => {
