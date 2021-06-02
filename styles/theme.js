@@ -1,33 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
-export const colorSystems = {
-  light: {
-    primary: "#3454D1",
-    secondary: "#34D1BF",
-    accent: "#D1345B",
-    background: "#EFEFEF",
-    surface: "#070707",
-    error: "#B00020"
-  },
-  dark: {
-    primary: "#3454D1",
-    secondary: "#34D1BF",
-    accent: "#D1345B",
-    background: "#070707",
-    surface: "#EFEFEF",
-    error: "#B00020"
-  }
-}
-
-export const theme = (colorSystem) => ({
-  colors: {
-    ...colorSystem
-  },
-  fonts: {
-    family: "Nunito Sans",
-  }
-});
-
 export const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
