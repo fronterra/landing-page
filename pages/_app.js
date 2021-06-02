@@ -1,8 +1,9 @@
-import '../styles/globals.css'
 import { useState } from 'react'
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import { GlobalStyle, theme, colorSystems } from '../styles/theme';
+import { ThemeProvider } from 'styled-components';
 
 function MyApp({ Component, pageProps }) {
 
@@ -13,10 +14,13 @@ function MyApp({ Component, pageProps }) {
   }
   return (
     <>
-      <Navbar toggle={toggle} isOpen={isOpen}/>
-      <Sidebar toggle={toggle} isOpen={isOpen} />    
-      <Component {...pageProps} />
-      <Footer />
+      <ThemeProvider theme={() => (theme(colorSystems.dark))}>
+        <GlobalStyle />
+        <Navbar toggle={toggle} isOpen={isOpen} />
+        <Sidebar toggle={toggle} isOpen={isOpen} />    
+        <Component {...pageProps} />
+        <Footer />    
+      </ThemeProvider>
     </>
 
   )
