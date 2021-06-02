@@ -1,24 +1,31 @@
-import styled from 'styled-components';
+import { BlogFeedContainer, BlogFeed as Feed } from "./StyledComponents"
+import PropTypes from "prop-types";
+import BlogCard from "../BlogCard";
 
+/** 
+ * Maps an `Object[]` containing blog post metadata 
+ * onto an unordered feed.
+*/
+const BlogFeed = (props) => {
+    return (
+        <>
+            <BlogFeedContainer>
+                <Feed>
+                    {
+                        props.posts.map(
+                            post => {
+                                return <BlogCard key={post.uuid} {...post} />
+                            }
+                        )
+                    }    
+                </Feed>
+            </BlogFeedContainer>
+        </>
+    );
+};
 
+BlogFeed.PropTypes = {
+    posts: PropTypes.arrayOf(PropTypes.object)
+};
 
-export const BlogFeedContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-`;
-
-export const BlogFeed = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1100px;
-
-    @media only screen and (max-width: 1100px) {
-        max-width: 90%;
-    }
-`;
+export default BlogFeed;
