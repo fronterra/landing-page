@@ -4,15 +4,14 @@ import { formatDistance, subDays } from 'date-fns';
 /** Blog Card -- Container */
 export const BlogCardContainer = styled.div`
     position: relative;
-    border: .3px solid lightgrey;
     border-radius: 4px;
-    max-width: 340px;
+    max-width: ${props => props.featured ? `100%` : `340px`};
     margin: 55px;
-    font-family: "Nunito Sans";
+    font-family: ${({ theme }) => theme.fonts.family};
     width: 100%;
 
     @media only screen and (min-width: 1100px) {
-        max-width: 440px;
+        max-width: ${props => props.featured ? `100%` : `440px`};
     }
 
     @media only screen and (max-width: 1100px) {
@@ -67,36 +66,24 @@ export const BlogPostTag = styled.text`
     font-weight: 600;
     padding: 5px;
     text-transform: uppercase;
-    // margin: 20px;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.background};
     border-radius: 3px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.secondary};
     opacity: .85;
 `;
 
 export const BlogPostTitle = styled.h2`
     margin-top: 20px;
     font-weight: 900;
+    color: ${({ theme }) => theme.colors.surface};
 `;
 export const BlogPostDescription = styled.p`
     margin-top: 10px;
     font-weight: 400;
     height: 70px;
     overflow: hidden;
-    color: #333333;
+    color: ${({ theme }) => theme.colors.surface};
     line-height: 22px;
-
-    :after {
-        content: "";
-        text-align: right;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 70%;
-        // height: 1.2em;
-        height: 22px;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
-    }
 `;
 
 export const AuthorInformationContainer = styled.div`
@@ -111,6 +98,7 @@ export const AuthorInformationContainer = styled.div`
 `;
 export const AuthorName = styled.h5`
     margin: 10px 0px 0px 5px;
+    color: ${({ theme }) => theme.colors.surface};
 `;
 
 const StyledDateAndReadingLength = styled.h6``;

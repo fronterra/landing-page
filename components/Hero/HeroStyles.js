@@ -32,10 +32,10 @@ export const HeroAnimationContentContainer = styled.div`
 `;
 
 export const Arrow = styled(FaArrowRight)`
-  color: ${({ ishovering }) => (ishovering ? 'white' : '#1C5DB9')};
+  color: ${(props) => (props.ishovering ? props.theme.colors.surface : props.theme.colors.accent )};
 
   transition: transform 0.4s ease-in-out;  
-  transform: translate(${({ ishovering }) => (ishovering ? '12px' : '8px')}, 2px);
+  transform: translate(${(props) => (props.ishovering ? '12px' : '8px')}, 2px);
   
 `;
 
@@ -49,7 +49,6 @@ export const Image = styled.img`
   align-content: center;
   margin: 20px 20px 0 0;
   opacity: .90;
-  400px;
 
   @media screen and (max-width: 768px) {
     width: 300px;
@@ -66,17 +65,17 @@ export const CtaButton = styled.button`
   border-radius: 40px;
   height: 50px;
   font-size: 16px;
-  font-family: Nunito Sans;
+  font-family: ${({ theme }) => theme.fonts.family};
   font-weight: 400;
   width: 200px;
-  border: 2px solid #1C5DB9;
-  color: #1C5DB9;
+  border: 2px solid ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.accent};
   background: transparent;
 
   :hover {
     transition: all 0.2s ease-in-out;
-    background: #1C5DB9;
-    color: white;
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.surface};
     cursor: pointer;
   }
 `;
@@ -98,35 +97,15 @@ export const Row = styled.div`
 `;
 
 
-export const ChangableGradient = styled.div`
-  background: linear-gradient(
-    20deg,
-    hsl(${props => props.hue}, 60%, 65%),
-    hsl(${props => props.hue - 305}, 64%, 60%)
-  );
-  height: 100%;
-  width: 100%;
-`;
-
-export const SetGradient = styled.div`
-  background: linear-gradient(
-    20deg,
-    hsl(116,60%,65%), hsl(-189,64%,60%)    
-  );
-  height: 100%;
-  width: 100%;
-`;
-
-
 export const HeroH1 = styled.h1`
-  color: #333333;
-  font-family:  Nunito Sans;
+  color: ${({ theme }) => theme.colors.surface};
+  font-family:  ${({ theme }) => theme.fonts.family};
   font-size: 48px;
   font-weight: 900;
   text-align: center;
   max-width: 800px;
 
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     font-size: 28px;
     max-width: 480px;
   }
@@ -134,13 +113,12 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
   margin-top: 24px;
-  font-size: 
-  color: #fff;
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 20px;
   font-family: Nunito Sans;
   font-weight: 200;
   text-align: center;
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     font-size: 16px;
   }
 `;

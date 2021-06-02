@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 export const FooterContainer = styled.footer`
-  background-color: #1C5DB9;
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const FooterWrap = styled.div`
@@ -56,7 +56,7 @@ export const FooterLinkTitle = styled.h1`
 `;
 
 export const FooterLink = styled.a`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.surface};
   text-decoration: none !important;
   margin-bottom: 0.5rem;
   font-size: 14px;
@@ -96,7 +96,7 @@ export const SocialLogo = styled(Link)`
 `;
 
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.surface};
   margin-bottom: 16px;
 `;
 
@@ -108,6 +108,6 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 24px;
 `;

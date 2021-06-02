@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 const BlogCard = (props) => {
     return (
         <>
-            <BlogCardContainer>
+            <BlogCardContainer featured={props.featured}>
                 <PreviewImageContainer>
                     <PreviewImage src={props.feature_image}/>
                 </PreviewImageContainer>
@@ -55,6 +55,7 @@ const BlogCard = (props) => {
 BlogCard.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
+    featured: PropTypes.bool,
     published_at: PropTypes.string,
     excerpt: PropTypes.string,
     feature_image: PropTypes.string,
@@ -73,6 +74,7 @@ BlogCard.propTypes = {
 BlogCard.defaultProps = {
     slug: "this-is-a-title",
     title: "This is a title",
+    featured: false,
     published_at: "2019-03-05T19:30:15.000+00:00",
     feature_image: "https://static.ghost.org/v4.0.0/images/writing-posts-with-ghost.png",
     excerpt: "This is an excerpt",

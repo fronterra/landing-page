@@ -38,15 +38,9 @@ function HeroSection() {
               <Arrow ishovering={hover ? hover : undefined} />
             </CtaButton>            
           <ImagesContainer>
-              <Image src={homePageData.images.image1} alt=""/>
-
-              <Image  src={homePageData.images.image2} alt=""/>
-              <Image src={homePageData.images.image3} alt=""/>            
-
+              <Image src={homePageData.images.image1} alt=""/>           
           </ImagesContainer>           
-         
         </HeroContent>
-
       </HeroContainer>
     </>
   );

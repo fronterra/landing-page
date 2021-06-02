@@ -27,32 +27,39 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const Logo = styled.img`
-  height: 40px;
-  margin: 15px 0 0 0;
-  cursor: pointer;
-  transform: translateY(-5px);
+// export const Logo = styled.img`
+//   height: 40px;
+//   margin: 15px 0 0 0;
+//   cursor: pointer;
+//   transform: translateY(-5px);
 
-  @media screen and (max-width: 500px) {
-    height: 30px;
-    margin: 20px 0 0 0;
-  }
-`;
+//   @media screen and (max-width: 500px) {
+//     height: 30px;
+//     margin: 20px 0 0 0;
+//   }
+// `;
 
-export const NavLogo = styled.div`
-  position: absolute;
-  z-index: 999;
-  color: #333333;
-  font-family: dharma-gothic-c, sans-serif;
-  font-weight: 800;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 2.75rem;
-  // display: flex;
-  align-items: center;
-  margin-left: 24px;
+const NavLogo = styled.a`
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-family: gilbert;
+  font-weight: 700;
+  font-style: normal;
+  color: ${({ theme }) => theme.colors.surface};
   text-decoration: none;
+  cursor: pointer;
 `;
+
+export const Logo = () => {
+  return (
+    <Link href="/">
+      <NavLogo>
+        pollution project
+      </NavLogo>
+    </Link>
+  )
+}
 
 export const MobileIcon = styled.div`
   display: none;
@@ -90,7 +97,7 @@ export const NavItem = styled.li`
 
   &:hover {
     transition: all 0.1s ease-in-out;
-    border-bottom: 6px solid black;
+    border-bottom: 6px solid ${({ theme }) => theme.colors.surface};
   }
 `;
 
@@ -109,7 +116,7 @@ export const StyledLink = styled.a`
   // padding: 1.1rem;
   height: 100%;
   cursor: pointer;
-  color: #333333;
+  color: ${({ theme }) => theme.colors.surface};
 
   &:before {
     content: "";
@@ -118,7 +125,7 @@ export const StyledLink = styled.a`
     height: 3px;
     bottom: -4px;
     left: 0;
-    background-color: #333333;
+    background-color: ${({ theme }) => theme.colors.surface};
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -141,10 +148,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.div`
   border-radius: 50px;
-  background: #333333;
+  background: ${({ theme }) => theme.colors.surface};
   white-space: nowrap;
   padding: 10px 22px;
-  color: #333333;
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 16px;
   outline: none;
   border: none;
@@ -155,6 +162,6 @@ export const NavBtnLink = styled.div`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: white;
-    color: #333333;
+    color: ${({ theme }) => theme.colors.surface};
   }
 `;

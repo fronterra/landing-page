@@ -50,7 +50,7 @@ const Navbar = ({ toggle, isOpen }) => {
             <Nav>
                 <NavbarContainer>
                     <Link href="/">
-                        <Logo src={PollutionLogo} />
+                        <Logo />
                     </Link>
                     
                     <MobileIcon onClick={toggle}>
