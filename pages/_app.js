@@ -2,22 +2,25 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import { GlobalStyle, theme, colorSystems } from '../styles/theme';
+import { GlobalStyle } from '../styles/theme';
 import { ThemeProvider } from 'styled-components';
+import useDarkMode from '../hooks/useDarkMode';
 
 function MyApp({ Component, pageProps }) {
 
+  const [ theme, darkMode, toggleTheme ] = useDarkMode(false);
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => {
     setIsOpen(() => !isOpen);
   }
+
+
   return (
     <>
-      <ThemeProvider theme={() => (theme(colorSystems.dark))}>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Navbar toggle={toggle} isOpen={isOpen} />
-        <Sidebar toggle={toggle} isOpen={isOpen} />    
+        <Navbar toggleTheme={toggleTheme} darkMode={darkMode} toggle={toggle} isOpen={isOpen} />
+        <Sidebar toggleTheme={toggleTheme} darkMode={darkMode} toggle={toggle} isOpen={isOpen} />    
         <Component {...pageProps} />
         <Footer />    
       </ThemeProvider>
