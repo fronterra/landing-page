@@ -100,9 +100,3 @@ export const AuthorName = styled.h5`
     margin: 10px 0px 0px 5px;
     color: ${({ theme }) => theme.colors.surface};
 `;
-
-const StyledDateAndReadingLength = styled.h6``;
-export const DateAndReadingLength = ({ date, length }) => {
-    const formattedDate = formatDistance(subDays(new Date(date), 3), new Date(), { addSuffix: true });
-    return <StyledDateAndReadingLength>{formattedDate} --- {length}</StyledDateAndReadingLength>;
-};
