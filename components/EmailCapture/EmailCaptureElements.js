@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FormContainer = styled.form`
   width: 300px;
   display: flex;
+  justify-content: center;
   flex-direction: row;
 
   @media screen and (max-width: 350px) {

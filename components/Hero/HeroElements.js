@@ -2,11 +2,6 @@ import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
   color: #fff;
-  // background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
-  background: linear-gradient( 
-    0deg
-    ,hsl(200deg 86% 83% / 0%) );
-
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }

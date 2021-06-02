@@ -25,12 +25,12 @@ export const BlogHomeHeader = styled.div`
 
 export const StyledH1 = styled.h1`
     font-size: 40px;
+    color: ${({ theme }) => theme.colors.surface};
 `;
 
 export const StyledP = styled.p`
   margin-top: 24px;
-  font-size: 
-  color: grey;
+  color: ${({ theme }) => theme.colors.surface};;
   font-size: 20px;
   font-family: Nunito Sans;
   font-weight: 200;
