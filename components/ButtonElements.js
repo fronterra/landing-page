@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 import LinkR from 'next/link';
+import { BiMoon } from 'react-icons/bi';
+import { FaLightbulb } from 'react-icons/fa';
 
 export const Button = styled(LinkS)`
   border-radius: 50px;
@@ -43,3 +45,46 @@ export const ButtonLink = styled(LinkR)`
     background: ${({ primary }) => (primary ? '#ffffff' : '#01BF71')};
   }
 `;
+
+const MoonIcon = styled(BiMoon)`
+  color: #6564DB;
+  font-size: 20px;
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+`;
+
+const LightIcon = styled(FaLightbulb)`
+  color: #F3A712;
+  font-size: 20px;
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+`; 
+
+const DarkModeBtn = styled.button`
+  background: transparent;
+  padding: 5px 15px 2px 15px;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    margin: 0px 40px 0px 40px;
+  }
+`;
+
+export const DarkModeButton = ({ darkMode, toggleTheme }) => {
+  return (
+    <DarkModeBtn
+      onClick={toggleTheme}
+    >
+      {
+        darkMode ? (
+          <MoonIcon />
+        ) : (
+          <LightIcon />
+        )
+      }
+    </DarkModeBtn>
+  );
+};

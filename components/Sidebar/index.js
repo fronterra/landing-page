@@ -12,6 +12,7 @@ import {
 } from './SidebarElements';
 import { menuData } from '../../data';
 import Link from 'next/link';
+import { DarkModeButton } from '../ButtonElements';
 
 const formatLink = ({ id, display, href }) => (
   <Link key={id} id={id} href={href} passHref>
@@ -22,14 +23,15 @@ const formatLink = ({ id, display, href }) => (
 );
 
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen, toggle, darkMode, toggleTheme }) => {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen}>
       <SidebarWrapper>
         <SidebarMenu>
           {
             menuData.keys.map((key) => formatLink(menuData.values[key]))
           }
+          <DarkModeButton darkMode={darkMode} toggleTheme={toggleTheme} />
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
