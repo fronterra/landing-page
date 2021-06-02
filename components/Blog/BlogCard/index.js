@@ -9,7 +9,6 @@ import {
     AuthorAvatarContainer, 
     AuthorInformationContainer,
     AuthorName,
-    DateAndReadingLength,
     PreviewImage,
     TextContainer
 } from "./StyledComponents"
@@ -43,7 +42,6 @@ const BlogCard = (props) => {
                         <AuthorName data-slug={props.primary_author.slug}>
                             by {props.primary_author.name}
                         </AuthorName>
-                        {/* <DateAndReadingLength date={props.published_at} length={props.reading_time} /> */}
                     </AuthorInformationContainer>                    
                 </TextContainer>
 
