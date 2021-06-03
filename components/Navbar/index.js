@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import PollutionLogo from '../../public/logos/pollution-project-logo.png';
-
 import Burger from '@animated-burgers/burger-squeeze';
 
 import {
