@@ -1,7 +1,7 @@
 import React from 'react';
 import ghostCMS from '../../services/ghostCMS';
 import BlogFeed from '../../components/Blog/BlogFeed';
-import { BlogHeader } from '../../components/Blog/BlogHeader/StyledComponents';
+import BlogHeader from '../../components/Blog/BlogHeader';
 
 const Blog = ({ posts }) => {
   return (

@@ -14,7 +14,7 @@ const BlogHeader = ({ heading, subheading }) => (
   </BlogHeaderContainer>
 );
 
-BlogHeader.PropTypes = {
+BlogHeader.propTypes = {
     heading: PropTypes.string,
     subheading: PropTypes.string
 };
