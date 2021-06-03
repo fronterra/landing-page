@@ -27,18 +27,6 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-// export const Logo = styled.img`
-//   height: 40px;
-//   margin: 15px 0 0 0;
-//   cursor: pointer;
-//   transform: translateY(-5px);
-
-//   @media screen and (max-width: 500px) {
-//     height: 30px;
-//     margin: 20px 0 0 0;
-//   }
-// `;
-
 const NavLogo = styled.a`
   padding: 15px;
   text-align: center;
