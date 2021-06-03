@@ -1,18 +1,13 @@
 import React from 'react';
 import {
   SidebarContainer,
-  Icon,
-  CloseIcon,
   SidebarWrapper,
   SidebarMenu,
-  SidebarLink,
-  SidebarRoute,
-  SideBtnWrap,
   StyledSidebarLink
 } from './SidebarElements';
 import { menuData } from '../../data';
 import Link from 'next/link';
-import { DarkModeButton } from '../ButtonElements';
+import { DarkModeButton } from '../Buttons/StyledComponents';
 
 const formatLink = ({ id, display, href }) => (
   <Link key={id} id={id} href={href} passHref>
@@ -23,7 +18,7 @@ const formatLink = ({ id, display, href }) => (
 );
 
 
-const Sidebar = ({ isOpen, toggle, darkMode, toggleTheme }) => {
+const Sidebar = ({ isOpen, darkMode, toggleTheme }) => {
   return (
     <SidebarContainer isOpen={isOpen}>
       <SidebarWrapper>

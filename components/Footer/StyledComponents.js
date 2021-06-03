@@ -56,7 +56,7 @@ export const FooterLinkTitle = styled.h1`
 `;
 
 export const FooterLink = styled.a`
-  color: ${({ theme }) => theme.colors.surface};
+  color: #fff;
   text-decoration: none !important;
   margin-bottom: 0.5rem;
   font-size: 14px;
@@ -96,7 +96,7 @@ export const SocialLogo = styled(Link)`
 `;
 
 export const WebsiteRights = styled.small`
-  color: ${({ theme }) => theme.colors.surface};
+  color: #fff;
   margin-bottom: 16px;
 `;
 
@@ -108,6 +108,6 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-  color: ${({ theme }) => theme.colors.surface};
+  color: #fff;
   font-size: 24px;
 `;

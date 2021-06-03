@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BlogHomeHeaderContainer = styled.div`
+export const BlogHeaderContainer = styled.div`
     height: 200px;
     width: 100%;
 
@@ -14,7 +14,7 @@ export const BlogHomeHeaderContainer = styled.div`
     max-width: 1100px;
 `;
 
-export const BlogHomeHeader = styled.div`
+export const BlogHeader = styled.div`
     margin-top: 100px;
     height: 100%;
     align-content: center;
@@ -30,7 +30,7 @@ export const StyledH1 = styled.h1`
 
 export const StyledP = styled.p`
   margin-top: 24px;
-  color: ${({ theme }) => theme.colors.surface};;
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 20px;
   font-family: Nunito Sans;
   font-weight: 200;

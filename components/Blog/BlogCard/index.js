@@ -9,16 +9,15 @@ import {
     AuthorAvatarContainer, 
     AuthorInformationContainer,
     AuthorName,
-    DateAndReadingLength,
     PreviewImage,
     TextContainer
-} from "./BlogCardElements"
+} from "./StyledComponents"
 import PropTypes from "prop-types";
 
 const BlogCard = (props) => {
     return (
         <>
-            <BlogCardContainer key={props.uuid} featured={props.featured}>
+            <BlogCardContainer featured={props.featured}>
                 <PreviewImageContainer>
                     <PreviewImage src={props.feature_image}/>
                 </PreviewImageContainer>
@@ -43,7 +42,6 @@ const BlogCard = (props) => {
                         <AuthorName data-slug={props.primary_author.slug}>
                             by {props.primary_author.name}
                         </AuthorName>
-                        {/* <DateAndReadingLength date={props.published_at} length={props.reading_time} /> */}
                     </AuthorInformationContainer>                    
                 </TextContainer>
 
@@ -53,7 +51,6 @@ const BlogCard = (props) => {
 }
 
 BlogCard.propTypes = {
-    uuid: PropTypes.string,
     slug: PropTypes.string,
     title: PropTypes.string,
     featured: PropTypes.bool,
@@ -73,7 +70,6 @@ BlogCard.propTypes = {
 };
 
 BlogCard.defaultProps = {
-    uuid: "fdsfji20f",
     slug: "this-is-a-title",
     title: "This is a title",
     featured: false,

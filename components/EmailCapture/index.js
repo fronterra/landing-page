@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, FormButton, FormContainer } from './EmailCaptureElements';
+import { TextInput, FormButton, FormContainer } from './StyledComponents';
 import { useEmailCapture } from './useEmailCapture';
 
 const EmailCapture = () => {
