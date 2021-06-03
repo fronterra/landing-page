@@ -9,7 +9,7 @@ import {
   ImagesContainer,
   Image,
   HeroP
-} from './HeroStyles';
+} from './StyledComponents';
 
 import { homePageData } from '../../data/index';
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { FaArrowRight } from 'react-icons/fa';
 
 /** 
