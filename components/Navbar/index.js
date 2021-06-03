@@ -14,7 +14,7 @@ import {
 } from './NavbarElements';
 import Link from 'next/link';
 import { menuData } from '../../data';
-import { DarkModeButton } from '../ButtonElements';
+import { DarkModeButton } from '../Buttons/StyledComponents';
 
 /** 
  * formats menu data into JSX component. Making the
