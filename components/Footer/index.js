@@ -6,7 +6,6 @@ import {
   FaTwitter,
   FaLinkedin
 } from 'react-icons/fa';
-import { animateScroll as scroll } from 'react-scroll';
 import {
   FooterContainer,
   FooterWrap,
@@ -20,9 +19,10 @@ import {
   WebsiteRights,
   SocialIcons,
   SocialIconLink
-} from './FooterElements';
+} from './StyledComponents';
 import EmailCapture from '../EmailCapture';
 
+/** Renders a footer component with important links and a contact form */
 const Footer = () => {
   return (
     <FooterContainer>
