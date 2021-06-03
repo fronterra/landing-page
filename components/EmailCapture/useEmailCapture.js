@@ -1,5 +1,12 @@
 import { useState } from "react"
 
+/**
+ * 
+ * TODO: Update useEmailCapture hook to handle email form submissions 
+ * with AJAX, avoiding page defaults and redirects.
+ * 
+ */
+
 export const useEmailCapture = () => {
     const [email, setEmail] = useState("");
     const [successMessage, setSuccessMessage] = useState(null);
