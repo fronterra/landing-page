@@ -11,9 +11,7 @@ import {
   HeroP
 } from './StyledComponents';
 
-import { homePageData } from '../../data/index';
-
-const HeroSection = () => {
+const HeroSection = (props) => {
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
@@ -25,20 +23,20 @@ const HeroSection = () => {
       <HeroContainer>
         <HeroContent>
             <HeroH1>
-              {homePageData.heading}
+              {props.heading}
             </HeroH1>
             <HeroP>
-              {homePageData.subheading}
+              {props.subheading}
             </HeroP>
             <CtaButton onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={(e) => {
               e.preventDefault();
               window.location.href = 'https://usp.ucsd.edu/news-and-events/in-the-news/fronterra.html';
             }}>
-              {homePageData.ctaButton.content}
+              {props.ctaButton.content}
               <Arrow ishovering={hover ? hover : undefined} />
             </CtaButton>            
           <ImagesContainer>
-              <Image src={homePageData.images.image1} alt=""/>           
+              <Image src={props.images.image1} alt=""/>           
           </ImagesContainer>           
         </HeroContent>
       </HeroContainer>
