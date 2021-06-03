@@ -13,7 +13,7 @@ import {
 
 import { homePageData } from '../../data/index';
 
-function HeroSection() {
+const HeroSection = () => {
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
