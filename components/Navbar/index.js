@@ -10,7 +10,7 @@ import {
     StyledLinkContainer
 } from './StyledComponents';
 import Link from 'next/link';
-import { menuData } from '../../data';
+import { menuData } from './data';
 import { DarkModeButton } from '../Buttons/StyledComponents';
 
 /** 

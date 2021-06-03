@@ -5,7 +5,7 @@ import {
   SidebarMenu,
   StyledSidebarLink
 } from './StyledComponents';
-import { menuData } from '../../data';
+import { menuData } from '../Navbar/data';
 import Link from 'next/link';
 import { DarkModeButton } from '../Buttons/StyledComponents';
 
