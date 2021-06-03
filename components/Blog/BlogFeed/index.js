@@ -24,7 +24,7 @@ const BlogFeed = (props) => {
     );
 };
 
-BlogFeed.PropTypes = {
+BlogFeed.propTypes = {
     posts: PropTypes.arrayOf(PropTypes.object)
 };
 
