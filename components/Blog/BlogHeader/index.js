@@ -19,6 +19,11 @@ BlogHeader.propTypes = {
     subheading: PropTypes.string
 };
 
+BlogHeader.defaultProps = {
+    heading: "Digest",
+    subheading: "Home for news on environmental technology and tutorials on identifying different types of pollution."
+};
+
 export const getStaticProps = async () => {
     return {
         props: {

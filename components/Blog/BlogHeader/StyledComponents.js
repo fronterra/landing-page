@@ -30,7 +30,7 @@ export const StyledH1 = styled.h1`
 
 export const StyledP = styled.p`
   margin-top: 24px;
-  color: ${({ theme }) => theme.colors.surface};;
+  color: ${({ theme }) => theme.colors.surface};
   font-size: 20px;
   font-family: Nunito Sans;
   font-weight: 200;
