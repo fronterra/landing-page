@@ -14,8 +14,8 @@ const Home = (props) => {
       </Head>
       <HeroSection {...props.hero} />
     </>
-  )
-}
+  );
+};
 
 export default Home;
 
@@ -36,5 +36,5 @@ export const getStaticProps = async () => {
         }
       }
     }
-  }
-}
+  };
+};
