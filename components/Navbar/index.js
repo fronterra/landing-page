@@ -8,14 +8,13 @@ import {
     Logo,
     StyledLink,
     StyledLinkContainer
-} from './NavbarElements';
+} from './StyledComponents';
 import Link from 'next/link';
 import { menuData } from '../../data';
 import { DarkModeButton } from '../Buttons/StyledComponents';
 
 /** 
- * formats menu data into JSX component. Making the
- * desired styles work here required a workaround 
+ * formats menu data into JSX component. Workaround 
  * the is specified here: https://github.com/vercel/next.js/issues/1942#issuecomment-313925454
  *  */
 const formatLink = ({ id, display, href, isExternal }) => {
