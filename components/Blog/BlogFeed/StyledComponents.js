@@ -1,6 +1,10 @@
+/**
+ * 
+ * Blog Feed Styles
+ * 
+ */
+
 import styled from 'styled-components';
-
-
 
 export const BlogFeedContainer = styled.div`
     width: 100%;
