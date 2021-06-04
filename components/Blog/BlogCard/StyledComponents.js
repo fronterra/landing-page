@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { formatDistance, subDays } from 'date-fns';
 
 /** Blog Card -- Container */
 export const BlogCardContainer = styled.div`
