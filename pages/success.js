@@ -1,6 +1,5 @@
-import { SuccessMessageContainer, SuccessMessageBox, SuccessMessage, ReturnLink, MessageContainer, LinkContainer, CheckboxContainer } from "../components/SuccessMessage/SuccessMessageStyles";
+import { SuccessMessageContainer, SuccessMessageBox, SuccessMessage, ReturnLink, MessageContainer, LinkContainer, CheckboxContainer } from "../components/SuccessMessage/StyledComponents";
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
-import Navbar from '../components/Navbar';
 
 
 /** Page document displaying a success message after a user has submitted an email */
