@@ -10,7 +10,7 @@ import {
     AuthorInformationContainer,
     AuthorName,
     PreviewImage,
-    TextContainer
+    MetadataContainer
 } from "./StyledComponents"
 import PropTypes from "prop-types";
 
@@ -33,7 +33,7 @@ const BlogCard = (props) => {
                         {props.excerpt}
                     </BlogPostDescription>
                 </DescriptionContainer>
-                <TextContainer>
+                <MetadataContainer>
                     <AuthorAvatarContainer>
                         <AuthorAvatar src={props.primary_author.profile_image}/>
                         
@@ -43,7 +43,7 @@ const BlogCard = (props) => {
                             by {props.primary_author.name}
                         </AuthorName>
                     </AuthorInformationContainer>                    
-                </TextContainer>
+                </MetadataContainer>
 
             </BlogCardContainer>
         </>

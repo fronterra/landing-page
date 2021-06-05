@@ -9,22 +9,25 @@ import { menuData } from '../Navbar/data';
 import Link from 'next/link';
 import { DarkModeButton } from '../Buttons/StyledComponents';
 
-const formatLink = ({ id, display, href }) => (
-  <Link key={id} id={id} href={href} passHref>
-    <StyledSidebarLink>
-      {display}
-    </StyledSidebarLink>
-  </Link>
-);
+const formatLink = ({ id, display, href, toggle }) => {
+  return (
+    <Link key={id} id={id} href={href} passHred>
+      {/* workaround for closing mobile sidebar when link is clicked */}
+      <StyledSidebarLink onClick={() => toggle(true)}> 
+        {display}
+      </StyledSidebarLink>
+    </Link>
+  );
+};
 
 
-const Sidebar = ({ isOpen, darkMode, toggleTheme }) => {
+const Sidebar = ({ isOpen, darkMode, toggleTheme, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen}>
       <SidebarWrapper>
         <SidebarMenu>
           {
-            menuData.keys.map((key) => formatLink(menuData.values[key]))
+            menuData.keys.map((key) => formatLink({...menuData.values[key], toggle}))
           }
           <DarkModeButton darkMode={darkMode} toggleTheme={toggleTheme} />
         </SidebarMenu>
