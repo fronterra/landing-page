@@ -10,11 +10,15 @@ function MyApp({ Component, pageProps }) {
 
   const [ theme, darkMode, toggleTheme ] = useDarkMode(false);
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(() => !isOpen);
-  }
 
-
+  const toggle = (close=true) => {
+    if (!close) {
+      return setIsOpen(false); // check for close override flag
+    } else {
+      setIsOpen(() => !isOpen);      
+    }
+  };
+  
   return (
     <>
       <ThemeProvider theme={theme}>
