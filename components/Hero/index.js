@@ -33,7 +33,7 @@ const HeroSection = (props) => {
               window.location.href = 'https://usp.ucsd.edu/news-and-events/in-the-news/fronterra.html';
             }}>
               {props.ctaButton.content}
-              <Arrow ishovering={hover ? hover : undefined} />
+              <Arrow ishovering={hover ? 'true' : undefined} />
             </CtaButton>            
           <ImagesContainer>
               <Image src={props.images.image1} alt=""/>           
