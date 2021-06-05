@@ -39,10 +39,10 @@ const NavLogo = styled.a`
   cursor: pointer;
 `;
 
-export const Logo = () => {
+export const Logo = ({ toggle }) => {
   return (
     <Link href="/">
-      <NavLogo>
+      <NavLogo onClick={() => toggle(false)}>
         pollution project
       </NavLogo>
     </Link>

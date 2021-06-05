@@ -41,10 +41,7 @@ const Navbar = ({ darkMode, toggleTheme, toggle, isOpen }) => {
         <>
             <Nav>
                 <NavbarContainer>
-                    <Link alt="" href="/">
-                        <Logo />
-                    </Link>
-                    
+                    <Logo toggle={toggle} />                 
                     <MobileIcon onClick={toggle}>
                         <Burger isOpen={isOpen} />
                     </MobileIcon>

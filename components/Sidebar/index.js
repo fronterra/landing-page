@@ -13,7 +13,7 @@ const formatLink = ({ id, display, href, toggle }) => {
   return (
     <Link key={id} id={id} href={href} passHred>
       {/* workaround for closing mobile sidebar when link is clicked */}
-      <StyledSidebarLink onClick={toggle}> 
+      <StyledSidebarLink onClick={() => toggle(true)}> 
         {display}
       </StyledSidebarLink>
     </Link>
