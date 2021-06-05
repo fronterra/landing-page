@@ -11,7 +11,7 @@ export const FormContainer = styled.form`
   }
 `;
 
-export const TextInput = styled.input`
+export const EmailInput = styled.input`
   height: 40px;
   width: 200px;
   padding: 16px 16px;
