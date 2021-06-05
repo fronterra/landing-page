@@ -48,7 +48,7 @@ export const AuthorAvatar = styled.img`
     border-radius: 50%;
 `;
 
-export const TextContainer = styled.div`
+export const MetadataContainer = styled.div`
     display: flex;
     flex-direction: row;
     text-align: center;
